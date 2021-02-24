@@ -11,9 +11,7 @@ public class EmpWage {
 	
 	public static final int Max_hrs = 50;
 	
-//variables
 
-	static int totalempwage;
 
 	static int   calwage(){
 	
@@ -21,9 +19,10 @@ public class EmpWage {
 
 	int totalemphrs =0;
 	
-	while (totalworkingday != DAYS_IN_MONTH && totalemphrs <= Max_hrs){
+	int emphrs = 0;
+	
 
-	int emphrs, empwage;
+	while (totalworkingday != DAYS_IN_MONTH && totalemphrs <= Max_hrs){
 
 	int empCheck = (int) Math.floor(Math.random() * 10 ) % 3;
 	
@@ -40,18 +39,20 @@ public class EmpWage {
 	emphrs = 0;
   }
 	
-		
-	empwage = emphrs * emp_wage_per_hr;
+	totalworkingday++;	
+	
+	int empwage = emphrs * emp_wage_per_hr;
 
-	totalempwage += empwage;
 
 	totalemphrs += emphrs;
 
 	System.out.println("Employee day" + totalworkingday + "wage  :" +empwage);
 
-	totalworkingday++;
 	
 	}
+
+	int totalempwage = totalemphrs * emp_wage_per_hr;
+	System.out.println("Total Employee Wage : " +totalempwage);
   return totalempwage;
 	
 }
@@ -60,7 +61,6 @@ public class EmpWage {
 
 	calwage();
 	
-	System.out.println ("total employee wage :" +totalempwage);	
 
  }
 }
