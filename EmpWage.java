@@ -5,7 +5,7 @@ public class EmpWage {
 
 	public static final int IS_PART_TIME = 2;	
 
-	public static final int emp_wage_per_hr = 20;
+	public static final int emp_wage_per_hr = 30;
 
 
 
@@ -13,7 +13,7 @@ public class EmpWage {
 
 		//variables
 	
-	int emphrs, empwage;
+	int Emphrs, Empwage;
 
 	int empCheck = (int) Math.floor(Math.random() * 10) % 3;
 	
@@ -23,7 +23,7 @@ public class EmpWage {
 
 	System.out.println("employee is full time");
 	
-	emphrs = 8;
+	Emphrs = 8;
 
 	break;
 
@@ -31,7 +31,7 @@ public class EmpWage {
 	
 	System.out.println("employee is part time");
 
-	emphrs = 4;
+	Emphrs = 4;
 
 	break;
 	
@@ -39,12 +39,12 @@ public class EmpWage {
 
 	System.out.println("Employee is absent");
 
-	emphrs = 0;
+	Emphrs = 0;
 	}
 		
-	empwage = emphrs * emp_wage_per_hr;
+	Empwage = Emphrs * emp_wage_per_hr;
 	
-	System.out.println("Employee daily wage is" +emphrs);
+	System.out.println("Employee daily wage is" +Empwage);
 }
 
 	public static void main (String[] args){
