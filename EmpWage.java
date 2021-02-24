@@ -1,36 +1,45 @@
 public class EmpWage {
 	
 		//constant
-		public static final int IS_PRESENT = 1;
-		
+	public static final int IS_PRESENT = 1;
+	public static final int emp_wage_per_hr = 20;
 
 
 
-		public static void  CheckAttaindance(){
+	public static void calwage(){
 
-		int empCheck =(int) Math.floor(Math.random() * 10) % 2;
+		//variables
+	
+	int emphrs, empwage;
 
-		switch (empCheck) {
+	int empCheck = (int) Math.floor(Math.random() * 10) % 2;
+	
+	switch (empCheck){
+	
+	case IS_PRESENT:
 
-		case IS_PRESENT :
+	System.out.println("employee is present");
+	
+	emphrs = 8;
 
-		System.out.println("Employee is Present");
+	break;
+	
+	default:
 
-		break;
+	System.out.println("Employee is absent");
 
-		default :
-
-		System.out.println("Employee is Absent");
-
-		}
+	emphrs = 0;
 	}
+		
+	empwage = emphrs * emp_wage_per_hr;
+	
+	System.out.println("Employee daily wage is" +emphrs);
+}
 
-	public static void main(String[] args){
+	public static void main (String[] args){
+
+	calwage();
+ }
+}
 
 
-	System.out.println("Welcome to Employee Wage Computation Program");
-
-
- 	CheckAttaindance();
-	}		
-}	
