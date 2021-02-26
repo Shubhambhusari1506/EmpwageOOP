@@ -86,7 +86,13 @@ public class EmpWage implements CompanyWage{
 
 	return totalEmpHrs * companyEmpWage.empWagePerHr;
 	}
+	
+	public int getTotalWage(String companyName){
+	return companyToEmpWageMap.get(companyName).totalEmpWage;
 
+}
+	
+	
 	public static void main(String[] args){
 
 	EmpWage empwage = new EmpWage();
@@ -95,5 +101,8 @@ public class EmpWage implements CompanyWage{
 	empwage.addCompanyWage("BigBazaar", 25, 14, 40);
 	empwage.addCompanyWage("superMegaMart", 20, 12, 40);
 	empwage.computeWage();
+	System.out.println("total wage for Dmart:" +empwage.getTotalWage("Dmart"));
+	System.out.println("total wage for Bigbazar:" +empwage.getTotalWage("BigBazar"));
+	System.out.println("total wage for superMegaMart:" +empwage.getTotalWage("superMegaMart"));
 	}
 }
